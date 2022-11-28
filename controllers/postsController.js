@@ -1,5 +1,5 @@
 const pug = require('pug');
-// const Post=require("../models/postModel")
+const post=require('../models/post/postModel')
 
 async function getPosts(req,res){
    //Recupérer tous les posts dans myBlogdb et envoyer index.pug au client
@@ -11,6 +11,15 @@ async function getPost(req,res){
 
 async function addPost(req,res){
    //Créer un nouveau post dans myBlogdb et rediriger le client vers /
+   let data=req.body;
+    await post.create({
+        titre:data.titre,
+        auteur:data.auteur,
+        resume:data.resume,
+        contenu:data.contenu
+    }).then((d)=>{
+        res.send(d)
+    })
 }
 
 async function editPost(req,res){

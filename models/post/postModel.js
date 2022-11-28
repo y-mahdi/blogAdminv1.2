@@ -17,7 +17,7 @@ const postSchema=mongoose.Schema({
         maxLength:100
     }, 
 
-    content: {
+    contenu: {
         type:String,
         required:[true,"this field is required"],
         minLength:100
