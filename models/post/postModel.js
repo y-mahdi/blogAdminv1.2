@@ -5,7 +5,8 @@ const mongoose=require("mongoose")
 const postSchema=mongoose.Schema({
     titre: {
         type:String,
-        required:[true,"this field is required"]
+        required:[true,"this field is required"],
+        unique:true
     },
     auteur:{
         type:String
