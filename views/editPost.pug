@@ -13,7 +13,19 @@ html(lang="en")
             div.header 
                 p Notre blog 
             if method=='update'
-
+                div.formcontainer
+                    p edit post 
+                    form(method='post',action='/api/updatepost/'+data._id) 
+                        div titre 
+                        input(type="text", name="titre",placeholder=data.titre)
+                        div Auteur 
+                        input(type="text", name="auteur",placeholder=data.auteur) 
+                        div Résumé
+                        textarea(name="resume", cols="30", rows="4",maxlength="100") #{data.resume}
+                        div Contenu -html-
+                        textarea(name="contenu", cols="30", rows="10") #{data.contenu} 
+                        div 
+                        button(type="submit") Enregistrer
 
             else 
                 div.formcontainer

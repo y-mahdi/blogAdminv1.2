@@ -1,1 +1,17 @@
 <!-- Detail d'un post -->
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet", href="/css/home.css")
+        title #{data.titre}
+    body 
+        di.container 
+            div.header 
+                p Notre Blog
+            div.titreblog 
+                p #{data.titre}
+            div.textblog 
+                p #{data.contenu}

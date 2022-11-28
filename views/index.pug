@@ -23,9 +23,9 @@ html(lang="en")
                     div.bareModif 
                         div.title #{val.titre}
                         div.actionicons
-                            a(href="/")
+                            a(href="/posts/edit/"+val._id)
                                 img(src="/images/editing.png", alt="", srcset="")
-                            a(href="")
+                            a(href="/api/deletepost/"+val._id)
                                 img(src="/images/trash.png", alt="alt") 
 
                     div.infopost 
