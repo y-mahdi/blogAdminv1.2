@@ -1,1 +1,31 @@
 <!-- formulaire pour créer un post -->
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet", href="/css/edit.css")
+        title edit post
+    body 
+
+        div.container 
+            div.header 
+                p Notre blog 
+            if method=='update'
+
+
+            else 
+                div.formcontainer
+                    p Nouveau post 
+                    form(method='post',action='/api/addpost') 
+                        div titre 
+                        input(type="text", name="titre",placeholder='titre')
+                        div Auteur 
+                        input(type="text", name="auteur",placeholder='Auteur') 
+                        div Résumé
+                        textarea(name="resume", cols="30", rows="4",maxlength="100")
+                        div Contenu -html-
+                        textarea(name="contenu", cols="30", rows="10") 
+                        div 
+                        button(type="submit") Add Post
