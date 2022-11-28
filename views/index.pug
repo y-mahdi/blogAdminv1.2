@@ -1,1 +1,39 @@
 <!-- Liste de tous les posts -->
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet", href="/css/home.css")
+        title Notre Blog
+    body 
+        div.header 
+            p Notre blog 
+
+        div.homebutton 
+            a(href="/")
+                img(src="/images/home.png", alt="alt")
+        div.addbutton 
+            a(href="/")
+                img(src="/images/plus.png", alt="alt")  
+        div.posts 
+            each val in data 
+                div.post 
+                    div.bareModif 
+                        div.title #{val.titre}
+                        div.actionicons
+                            a(href="/")
+                                img(src="/images/editing.png", alt="", srcset="")
+                            a(href="")
+                                img(src="/images/trash.png", alt="alt") 
+
+                    div.infopost 
+                        p Auteur: #{val.auteur}
+                        p date de Creation:#{val.createdAt}
+                        p date de Modification:#{val.updatedAt}
+                    div.resume 
+                        div.titreresume Résumé
+                    div.resumetext
+                        p #{val.resume} ... 
+                            a(href="/post") lire plus    

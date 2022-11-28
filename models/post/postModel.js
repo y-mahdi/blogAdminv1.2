@@ -6,7 +6,7 @@ const postSchema=mongoose.Schema({
     titre: {
         type:String,
         required:[true,"this field is required"],
-        unique:true
+        // unique:true
     },
     auteur:{
         type:String
@@ -14,13 +14,13 @@ const postSchema=mongoose.Schema({
     resume:{
         type:String,
         required:[true,"this field is required"],
-        maxLength:100
+        // maxLength:100
     }, 
 
     contenu: {
         type:String,
         required:[true,"this field is required"],
-        minLength:100
+        // minLength:100
     }
 }, {timestamps:true})
 
